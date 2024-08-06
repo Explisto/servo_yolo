@@ -26,26 +26,39 @@ _Текущие задачи_
    ```
 4. Включить в настройках i2c - интерфейс (команда для открытия меню настроеек прописана ниже)
     ```
-   sudo raspi-congig
+   sudo raspi-config
    ```
 5. Собираем механизм
-6. Скачиваем библиотеки
-   * sudo apt install python3-pip
-   * sudo apt install python3-venv
+6. Скачиваем библиотеки отдельно (из-за особенностей архитектуры процессора ARM-64 нужно скачать данные библиотеки через менеджер пакетов apt)
+   * sudo apt install python3-opencv
+   * sudo apt install python3-pillow
+   * sudo apt install python3-PyYAML
+   * sudo apt install python3-scipy
+   * sudo apt install python3-torch
+   * sudo apt install python3-torchvision
+   * sudo apt install python3-tqdm
+   * sudo apt install libcap-dev
 7. Переходим в папку проекта командой cd
    ```
    cd Documents/projects/<name folder>
    ```
 8. Для работы проекта необходимо создать виртуальное окружение с помощью команды
    ```
-   python -m venv v --system_site_packages
+   python3 -m venv <имя окружения> --system_site_packages
+   ```
+   И активируем его
+   ```
+   source <имя окружения>/bin/activate
    ```
 9. После этого установить библиотеки
    ```
-   pip install picamera-2
+   pip install picamera2
    pip install ultralitics
    ```
-10. Скачиваем датасет для обучения нейронной сети с сайта Roboflow
+10. Скачиваем датасет для обучения нейронной сети модели YOLOv8 с сайта kaggle
+  ```
+  https://www.kaggle.com/datasets/muki2003/yolo-drone-detection-dataset
+  ```
 11. Разделяем изображения на 3 папки: тренировочные, валидные и тестовые
 12. Обучаем нейронную сеть
     ```
