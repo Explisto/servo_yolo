@@ -1,0 +1,9 @@
+person:
+Coordinates: (164, 73, 192, 169)
+Coordinates: (40, 89, 87, 155)
+Coordinates: (8, 79, 40, 164)
+Coordinates: (80, 77, 109, 164)
+Coordinates: (117, 74, 153, 164)
+tie:
+Coordinates: (171, 88, 175, 106)
+Coordinates: (172, 88, 176, 106)
